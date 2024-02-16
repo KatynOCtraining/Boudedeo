@@ -1,0 +1,68 @@
+.hero-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px; /* Ajustement initial pour petits écrans */
+  background-color: #f8f0fb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.artist-photo img {
+  width: 100%; /* Pour s'adapter à la taille de .artist-photo */
+  max-width: 250px; /* Largeur maximale pour garder le contrôle sur la taille de l'image */
+  height: auto; /* Ajuste la hauteur automatiquement */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #a391b6;
+  margin-right: 20px; /* Espacement entre l'image et la description */
+}
+
+.artist-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%; /* Permet au texte de remplir l'espace sur petits écrans */
+}
+
+.artist-description h1,
+.artist-description p {
+  color: #5f4b8b;
+}
+
+.artist-description p {
+  font-size: 16px; /* Taille initiale adaptée pour petits écrans */
+  line-height: 1.6;
+}
+
+/* Media Queries pour ajustements sur tablettes et écrans plus larges */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 40px; /* Espacement plus généreux sur écrans plus larges */
+    flex-direction: column;
+  }
+
+  .artist-photo img {
+    max-width: 100px;
+  }
+
+  .artist-description p {
+    font-size: 18px; /* Taille plus grande du texte pour une meilleure lisibilité */
+  }
+}
+
+/* Ajustements pour les écrans très larges */
+@media (min-width: 1024px) {
+  .hero-banner {
+    flex-direction: row; /* Rétablissement de la direction de flex pour aligner image et texte */
+  }
+
+  .artist-photo,
+  .artist-description {
+    flex: 1; /* Donne une flexibilité égale aux deux éléments pour partager l'espace */
+  }
+}

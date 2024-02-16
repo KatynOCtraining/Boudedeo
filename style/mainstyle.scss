@@ -1,0 +1,28 @@
+@import "./_navbar";
+@import "./_herobanner";
+@import "./_gallery";
+@import "./_modale";
+@import "./_footer";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Roboto";
+  flex: 1; /* Permet au conteneur de s'étendre et de pousser le footer vers le bas */
+}
+
+h1 {
+  font-family: "Protest Revolution";
+  padding-bottom: 20px;
+}

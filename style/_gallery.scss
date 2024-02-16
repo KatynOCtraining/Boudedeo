@@ -1,0 +1,76 @@
+.gallery {
+  margin-top: 50px;
+  text-align: center;
+  background-color: #f8f0fb; /* Fond pastel, similaire à la navbar et au hero-banner */
+  padding: 40px 0px; /* Padding vertical pour l'espacement autour des éléments de la galerie */
+  border-radius: 20px; /* Bords arrondis pour adoucir le conteneur de la galerie */
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.gallery h2 {
+  color: #5f4b8b; /* Titre de la galerie en violet pastel pour l'harmonie */
+  margin-bottom: 30px; /* Un peu plus d'espace sous le titre */
+}
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espace entre les images */
+}
+
+.gallery-items a {
+  display: block;
+  width: calc(25% - 20px); /* Ajustement pour 4 colonnes avec espacement */
+  height: 200px; /* Hauteur fixe pour tous les éléments <a> */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px; /* Bords arrondis pour les vignettes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */
+  transition: box-shadow 0.3s ease; /* Transition d'ombre au survol */
+}
+
+.gallery-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease; /* Effet de zoom au survol, optionnel */ /* Bords arrondis pour les images, cohérents avec les éléments <a> */
+}
+
+/* Effet de zoom au survol, optionnel */
+.gallery-items a:hover img {
+  transform: scale(1.2);
+}
+/* Renforce l'effet au survol avec une ombre plus prononcée */
+.gallery-items a:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries pour ajuster la grille en fonction de la largeur de l'écran, inchangées */
+
+/* Ajustement des éléments de la galerie pour une meilleure apparence sur mobile */
+@media (max-width: 800px) {
+  .gallery-items a {
+    max-width: calc(50% - 20px); /* 2 colonnes pour une meilleure visibilité */
+    height: auto; /* Hauteur auto pour s'adapter au ratio de l'image */
+  }
+}
+
+/* Adaptations supplémentaires pour les très petits écrans */
+@media (max-width: 800px) {
+  .modal-content {
+    width: 100%; /* Ajuste la largeur de l'image à l'auto pour éviter le dépassement */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de la modale */
+    height: auto; /* Ajuste la hauteur automatiquement pour maintenir le ratio */
+    object-fit: contain; /* Montre l'image entière sans la couper */
+  }
+
+  .modal {
+    display: flex;
+    align-items: center; /* Centre verticalement l'image dans la modale */
+    justify-content: center; /* Centre horizontalement l'image dans la modale */
+    padding: 20px; /* Ajoute un peu d'espace autour de l'image */
+  }
+}

@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px; /* Ajusté pour une distribution équilibrée */
+  background-color: #f8f0fb; /* Couleur de fond pastel (exemple : lavande pâle) */
+  padding: 20px 0; /* Ajoute de l'espace autour des liens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+}
+
+.navbar a {
+  color: #a391b6; /* Couleur des liens pastel (exemple : violet pastel) */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px; /* Bords arrondis pour les liens */
+  transition: background-color 0.3s, color 0.3s; /* Transition douce pour le survol */
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #dec8e4; /* Couleur de fond au survol (exemple : lavande plus claire) */
+  color: #5f4b8b; /* Couleur du texte au survol (exemple : violet plus foncé) */
+}

@@ -1,0 +1,281 @@
+@charset "UTF-8";
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px; /* Ajusté pour une distribution équilibrée */
+  background-color: #f8f0fb; /* Couleur de fond pastel (exemple : lavande pâle) */
+  padding: 20px 0; /* Ajoute de l'espace autour des liens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+}
+
+.navbar a {
+  color: #a391b6; /* Couleur des liens pastel (exemple : violet pastel) */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px; /* Bords arrondis pour les liens */
+  transition: background-color 0.3s, color 0.3s; /* Transition douce pour le survol */
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #dec8e4; /* Couleur de fond au survol (exemple : lavande plus claire) */
+  color: #5f4b8b; /* Couleur du texte au survol (exemple : violet plus foncé) */
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px; /* Ajustement initial pour petits écrans */
+  background-color: #f8f0fb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.artist-photo img {
+  width: 100%; /* Pour s'adapter à la taille de .artist-photo */
+  max-width: 250px; /* Largeur maximale pour garder le contrôle sur la taille de l'image */
+  height: auto; /* Ajuste la hauteur automatiquement */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #a391b6;
+  margin-right: 20px; /* Espacement entre l'image et la description */
+}
+
+.artist-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%; /* Permet au texte de remplir l'espace sur petits écrans */
+}
+
+.artist-description h1,
+.artist-description p {
+  color: #5f4b8b;
+}
+
+.artist-description p {
+  font-size: 16px; /* Taille initiale adaptée pour petits écrans */
+  line-height: 1.6;
+}
+
+/* Media Queries pour ajustements sur tablettes et écrans plus larges */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 40px; /* Espacement plus généreux sur écrans plus larges */
+    flex-direction: column;
+  }
+  .artist-photo img {
+    max-width: 100px;
+  }
+  .artist-description p {
+    font-size: 18px; /* Taille plus grande du texte pour une meilleure lisibilité */
+  }
+}
+/* Ajustements pour les écrans très larges */
+@media (min-width: 1024px) {
+  .hero-banner {
+    flex-direction: row; /* Rétablissement de la direction de flex pour aligner image et texte */
+  }
+  .artist-photo,
+  .artist-description {
+    flex: 1; /* Donne une flexibilité égale aux deux éléments pour partager l'espace */
+  }
+}
+.gallery {
+  margin-top: 50px;
+  text-align: center;
+  background-color: #f8f0fb; /* Fond pastel, similaire à la navbar et au hero-banner */
+  padding: 40px 0px; /* Padding vertical pour l'espacement autour des éléments de la galerie */
+  border-radius: 20px; /* Bords arrondis pour adoucir le conteneur de la galerie */
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.gallery h2 {
+  color: #5f4b8b; /* Titre de la galerie en violet pastel pour l'harmonie */
+  margin-bottom: 30px; /* Un peu plus d'espace sous le titre */
+}
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espace entre les images */
+}
+
+.gallery-items a {
+  display: block;
+  width: calc(25% - 20px); /* Ajustement pour 4 colonnes avec espacement */
+  height: 200px; /* Hauteur fixe pour tous les éléments <a> */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px; /* Bords arrondis pour les vignettes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */
+  transition: box-shadow 0.3s ease; /* Transition d'ombre au survol */
+}
+
+.gallery-items img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease; /* Effet de zoom au survol, optionnel */ /* Bords arrondis pour les images, cohérents avec les éléments <a> */
+}
+
+/* Effet de zoom au survol, optionnel */
+.gallery-items a:hover img {
+  transform: scale(1.2);
+}
+
+/* Renforce l'effet au survol avec une ombre plus prononcée */
+.gallery-items a:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries pour ajuster la grille en fonction de la largeur de l'écran, inchangées */
+/* Ajustement des éléments de la galerie pour une meilleure apparence sur mobile */
+@media (max-width: 800px) {
+  .gallery-items a {
+    max-width: calc(50% - 20px); /* 2 colonnes pour une meilleure visibilité */
+    height: auto; /* Hauteur auto pour s'adapter au ratio de l'image */
+  }
+}
+/* Adaptations supplémentaires pour les très petits écrans */
+@media (max-width: 800px) {
+  .modal-content {
+    width: 100%; /* Ajuste la largeur de l'image à l'auto pour éviter le dépassement */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de la modale */
+    height: auto; /* Ajuste la hauteur automatiquement pour maintenir le ratio */
+    -o-object-fit: contain;
+       object-fit: contain; /* Montre l'image entière sans la couper */
+  }
+  .modal {
+    display: flex;
+    align-items: center; /* Centre verticalement l'image dans la modale */
+    justify-content: center; /* Centre horizontalement l'image dans la modale */
+    padding: 20px; /* Ajoute un peu d'espace autour de l'image */
+  }
+}
+.modal {
+  display: none; /* Caché par défaut */
+  position: fixed; /* Reste en place lors du scroll */
+  z-index: 1000; /* Au-dessus de tout */
+  left: 50%; /* Déplacement de 50% de la largeur à partir de la gauche */
+  top: 50%; /* Déplacement de 50% de la hauteur à partir du haut */
+  width: 80%; /* Largeur de la modale */
+  height: 80%; /* Hauteur de la modale */
+  transform: translate(-50%, -50%); /* Centre la modale précisément */
+  box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur/hauteur */
+}
+
+.modal-content {
+  background: #fff; /* Fond de la modale */
+  padding: 20px; /* Espacement intérieur pour le contenu */
+  border-radius: 5px; /* Bords arrondis pour l'esthétique */
+  width: 100%; /* Utilisez 100% de .modal pour le contenu */
+  height: auto; /* Hauteur automatique basée sur le contenu */
+  box-sizing: border-box; /* Inclut padding et border dans la dimension calculée */
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px; /* Ajustez selon vos besoins */
+  right: 20px; /* Ajustez selon vos besoins */
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f44336; /* Fond rouge pour le bouton de fermeture */
+  border-radius: 50%; /* Rend le bouton rond */
+  padding: 5px 12px;
+}
+
+footer {
+  background-color: #f8f0fb; /* Couleur de fond pastel, similaire à la navbar et au hero-banner */
+  color: #5f4b8b; /* Couleur du texte en violet pastel pour l'harmonie */
+  text-align: center;
+  padding: 40px 0; /* Padding plus généreux pour une meilleure espacement */
+  margin-top: 50px;
+  border-top: 2px solid #a391b6; /* Ligne de séparation discrète pour délimiter le footer */
+}
+
+footer p {
+  margin-bottom: 30px; /* Un peu plus d'espace au-dessus des boutons/icônes */
+}
+
+.footer-btn,
+.footer_icon a {
+  display: inline-block;
+  background-color: #dec8e4; /* Couleur de fond des boutons en lavande claire */
+  color: #5f4b8b; /* Couleur du texte en violet pastel */
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px; /* Bords plus arrondis pour un look plus doux */
+  transition: background-color 0.3s, transform 0.3s; /* Transition ajoutée pour le transform */
+}
+
+.footer-btn:hover,
+.footer_icon a:hover {
+  background-color: #c7b2d6; /* Couleur de fond plus foncée au survol */
+  transform: translateY(-2px); /* Léger effet de "soulèvement" au survol */
+}
+
+.footer_icon {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Espacement réduit entre les icônes pour une meilleure cohérence */
+}
+
+.footer_icon i {
+  cursor: pointer; /* Indique que les icônes sont cliquables */
+  transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.footer_icon i:hover {
+  color: #c7b2d6; /* Changement de couleur au survol pour les icônes */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Roboto";
+  flex: 1; /* Permet au conteneur de s'étendre et de pousser le footer vers le bas */
+}
+
+h1 {
+  font-family: "Protest Revolution";
+  padding-bottom: 20px;
+}/*# sourceMappingURL=mainstyle.css.map */

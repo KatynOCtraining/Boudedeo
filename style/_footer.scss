@@ -1,0 +1,45 @@
+footer {
+  background-color: #f8f0fb; /* Couleur de fond pastel, similaire à la navbar et au hero-banner */
+  color: #5f4b8b; /* Couleur du texte en violet pastel pour l'harmonie */
+  text-align: center;
+  padding: 40px 0; /* Padding plus généreux pour une meilleure espacement */
+  margin-top: 50px;
+  border-top: 2px solid #a391b6; /* Ligne de séparation discrète pour délimiter le footer */
+}
+
+footer p {
+  margin-bottom: 30px; /* Un peu plus d'espace au-dessus des boutons/icônes */
+}
+
+.footer-btn,
+.footer_icon a {
+  display: inline-block;
+  background-color: #dec8e4; /* Couleur de fond des boutons en lavande claire */
+  color: #5f4b8b; /* Couleur du texte en violet pastel */
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px; /* Bords plus arrondis pour un look plus doux */
+  transition: background-color 0.3s, transform 0.3s; /* Transition ajoutée pour le transform */
+}
+
+.footer-btn:hover,
+.footer_icon a:hover {
+  background-color: #c7b2d6; /* Couleur de fond plus foncée au survol */
+  transform: translateY(-2px); /* Léger effet de "soulèvement" au survol */
+}
+
+.footer_icon {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Espacement réduit entre les icônes pour une meilleure cohérence */
+}
+
+.footer_icon i {
+  cursor: pointer; /* Indique que les icônes sont cliquables */
+  transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.footer_icon i:hover {
+  color: #c7b2d6; /* Changement de couleur au survol pour les icônes */
+}

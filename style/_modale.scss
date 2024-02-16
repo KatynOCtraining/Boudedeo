@@ -1,0 +1,42 @@
+.modal {
+  display: none; /* Caché par défaut */
+  position: fixed; /* Reste en place lors du scroll */
+  z-index: 1000; /* Au-dessus de tout */
+  left: 50%; /* Déplacement de 50% de la largeur à partir de la gauche */
+  top: 50%; /* Déplacement de 50% de la hauteur à partir du haut */
+  width: 80%; /* Largeur de la modale */
+  height: 80%; /* Hauteur de la modale */
+
+  transform: translate(-50%, -50%); /* Centre la modale précisément */
+  box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur/hauteur */
+}
+
+.modal-content {
+  background: #fff; /* Fond de la modale */
+  padding: 20px; /* Espacement intérieur pour le contenu */
+  border-radius: 5px; /* Bords arrondis pour l'esthétique */
+  width: 100%; /* Utilisez 100% de .modal pour le contenu */
+  height: auto; /* Hauteur automatique basée sur le contenu */
+  box-sizing: border-box; /* Inclut padding et border dans la dimension calculée */
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px; /* Ajustez selon vos besoins */
+  right: 20px; /* Ajustez selon vos besoins */
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f44336; /* Fond rouge pour le bouton de fermeture */
+  border-radius: 50%; /* Rend le bouton rond */
+  padding: 5px 12px;
+}
